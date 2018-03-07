@@ -1,6 +1,4 @@
 import tensorflow as tf
-#reader = tf.WholeFileReader()
-#key,value = reader.read(tf.train.string_input_producer(['000001.jpg']))
 
 def get_inputs(sess, filenames): #filenames is a list contain all images' name that need to be processed
     #read images
