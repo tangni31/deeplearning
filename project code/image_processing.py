@@ -3,9 +3,16 @@ import tensorflow as tf
 def get_inputs(sess, filenames): #filenames is a list contain all images' name that need to be processed
     #read images
     reader = tf.WholeFileReader()
-    filename_list = tf.train.string_input_producer(filenames)
-    key, value = reader.read(filename_list)
-    image = tf.image.decode_jpeg(value, channels=3, name="dataset_image")
+    try:
+        filename_list = tf.train.string_input_producer(filenames)
+        key, value = reader.read(filename_list)
+        image = tf.image.decode_jpeg(value, channels=3, name="dataset_image")
+    except:
+        file = open(filenames. 'rb')
+        data = file.read()
+        file.close()
+        channels = 3
+        image = tf.image.decode_jpeg(data, channels=3, name="dataset_image")
     image.set_shape([None, None, 3])
 
     # image processing
