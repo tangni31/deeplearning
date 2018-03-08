@@ -1,3 +1,7 @@
-codes for T15's project 
+Codes for T15's project Image Super-resolution
+
+Coding not finished yet
+
+Dataset: Large-scale CelebFaces Attributes (CelebA) Dataset   http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
 
 DCGAN_model.py is not finished
