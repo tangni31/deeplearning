@@ -4,4 +4,8 @@ Coding not finished yet
 
 Dataset: Large-scale CelebFaces Attributes (CelebA) Dataset   http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
 
-DCGAN_model.py is not finished
+DCGAN Module: DCGAN_model.py    not finished
+Image procseeing module: image_processing.py  finished
+training module: train.py    not finished
+test module: test.py     not finished
+coordination module: main.py     not finished
