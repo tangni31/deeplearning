@@ -1,6 +1,12 @@
 import tensorflow as tf
+import numpy as np
 
+#hyperparameters:
 batch_size = 16
+gen_loss1_factor = 0.8
+momentum_bata1 = 0.5 #arXiv:1511.06434v2
+learning_rate = 0.0002 #arXiv:1511.06434v2
+
 
 class Model:
     #layer has 4 dimensions: (batch, width, height, channels)
