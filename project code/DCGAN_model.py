@@ -28,13 +28,14 @@ class Model:
         with tf.variable_scope(self.get_layer_name()):
             output = tf.nn.tanh(self.get_output())
         self.output.append(output)
+        return self
 
     def relu(self):
         #relu function
         with tf.variable_scope(self.get_layer_name()):
             out = tf.nn.relu(self.get_output())
         self.output.append(out)
-
+        return self
 
     def upscale(self):
         #generator need to upscale input images from 16*16 to 64*64
@@ -47,10 +48,7 @@ class Model:
 
     def leaky_relu(self,leak=0.2): #Use LeakyReLU activation in the discriminator for all layers: arXiv:1511.06434v2
         with tf.variable_scope(self.get_layer_name()):
-            t1 = 0.5 * (1 + leak)
-            t2 = 0.5 * (1 - leak)
-            out = t1 * self.get_output() + \
-                  t2 * tf.abs(self.get_output())
+            out = tf.nn.leaky_relu(self.get_output(),leak)
         self.output.append(out)
         return self
 
@@ -66,7 +64,6 @@ class Model:
 
     def mean(self):
         """averages the inputs from the previous layer"""
-
         with tf.variable_scope(self.get_layer_name()):
             prev_shape = self.get_output().get_shape()
             reduction_indices = list(range(len(prev_shape)))
