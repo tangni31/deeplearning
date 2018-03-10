@@ -1,5 +1,7 @@
 import tensorflow as tf
 
+batch_size = 16
+
 def get_inputs(sess, filenames): #filenames is a list contain all images' name that need to be processed
     #read images
     reader = tf.WholeFileReader()
@@ -38,7 +40,6 @@ def get_inputs(sess, filenames): #filenames is a list contain all images' name t
     image_input = tf.reshape(downsample, [16, 16,3])#16*16 input
 
     # batch
-    batch_size = 16
     image_inputs, image_outputs = tf.train.batch([image_input, image_output],
                                       batch_size=batch_size, num_threads=4,capacity = batch_size*3,
                                       name='inputs_and_outputs')
