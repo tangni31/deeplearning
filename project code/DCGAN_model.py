@@ -216,8 +216,6 @@ def generator_loss(dis_output, gen_output, image_input):
     #use cross entropy, feature: discriminator's output, labels = 1
     cross_entropy = tf.nn.sigmoid_cross_entropy_with_logits(logits=dis_output, labels=tf.ones_like(dis_output))
     gen_loss2 = tf.reduce_mean(cross_entropy, name='gen_loss2')
-
-
     gen_loss = tf.add(gen_loss1*gen_loss1_factor, gen_loss2*(1-gen_loss1_factor))
 
     return gen_loss
@@ -247,5 +245,10 @@ def optimizers(gen_loss, gen_vars, dis_loss, dis_vars):
                         We found the suggested learning rate of 0.001, to be too high, using 0.0002 instead.
                         momentum term β1 at 0.5 helped stabilize training"
     '''
+    gen_optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate, beta1=beta1, name="gen_optimizer")
+    dis_optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate, beta1=beta1, name="dis_optimizer")
+    gen_minimize = gen_optimizer.minimize(gen_loss, var_list=gen_vars, name="gen_loss_minimize")
+    dis_minimize = dis_optimizer.minimize(dis_loss, var_list=dis_vars, name="dis_loss_minimize")
+    return (gen_minimize, dis_minimize)
     
         
