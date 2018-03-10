@@ -164,19 +164,22 @@ def discriminator(sess, disc_input):
     dis_vars = list(set(new_vars) - set(old_vars))
     return model.get_output(), dis_vars
 
+
 def create_model(sess, image_input, image_output):
     #create generator model
     with tf.variable_scope('generator') as scope:
         gen_output, gen_vars = generator(sess, image_input)
         scope.reuse_variables()
-
-    # Discriminator with real input
-    dis_real_input = tf.identity(image_output, name="dis_real_input")
+        
+    #create discriminator model    
+    dis_real_input = tf.identity(image_output, name="dis_real_input")# Discriminator's real input
     with tf.variable_scope('discriminator') as scope:
-        dis_real_output, dis_vars = discriminator(sess, dis_real_input)#real 64*64 image as discriminator's input
+        dis_real_output, dis_vars = discriminator(sess, dis_real_input)#real 64*64 image as discriminator's real input
         scope.reuse_variables()
-        dis_fake_output, _ = discriminator(sess,gen_output)#generator's output as discriminator's input        
+        dis_fake_output, _ = discriminator(sess,gen_output)#generator's output as discriminator's fake input        
+    
     return [gen_output, gen_vars, dis_real_output, dis_fake_output, dis_vars]
+
 
 def downscale(gen_output):
     '''
@@ -197,6 +200,7 @@ def downscale(gen_output):
     downscale_image = tf.nn.conv2d(gen_output, weight, strides=[1,4,4,1], padding='SAME')
     return downscale_image
 
+
 def generator_loss(dis_output, gen_output, image_input):
     #lost 1, difference between generator output and input image
     downscale_gen_output = downscale(gen_output)
@@ -211,6 +215,8 @@ def generator_loss(dis_output, gen_output, image_input):
     gen_loss = tf.add(gen_loss1*gen_loss1_factor, gen_loss2*(1-gen_loss1_factor))
 
     return gen_loss
+
+
 
 def discriminator_loss(dis_real_output, dis_fake_output):
     '''
@@ -227,6 +233,7 @@ def discriminator_loss(dis_real_output, dis_fake_output):
                                                                  labels=tf.zeros_like(dis_fake_output))
     dis_fake_loss = tf.reduce_mean(cross_entropy_fake, name='disc_fake_loss')
     return  dis_real_loss, dis_fake_loss
+
 
 def optimizers(gen_loss, gen_vars, dis_loss, dis_vars):
     '''
