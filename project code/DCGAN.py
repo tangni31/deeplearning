@@ -68,7 +68,7 @@ class Model:
         return self
 
 
-    def mean(self):
+    def average(self):
         """averages the inputs from the previous layer"""
         with tf.variable_scope(self.get_layer_name()):
             prev_shape = self.get_output().get_shape()
@@ -165,6 +165,7 @@ def discriminator(sess, disc_input):
     model.leaky_relu()
 
     model.conv2d(1, mapsize=1, stride=1)
+    model.average()
 
     new_vars = tf.global_variables()
     dis_vars = list(set(new_vars) - set(old_vars))
