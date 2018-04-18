@@ -18,7 +18,9 @@
 - to use your own image to test the model run: `python main.py test`   
 - intermediate results are saved in `/train` 
 
-
+![training](https://github.com/tangni31/tensorflow/blob/master/project%20code/training.png?raw=true)  
+During training, it will show the progress,  remaining training time, batch number, genertor and discriminator's loses.
+It will save the intermediate result for every 200(default) batches and save the checkpoint for every 10,000(default) batches.
 
 
 
