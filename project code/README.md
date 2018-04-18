@@ -9,7 +9,7 @@
 - DCGAN Module: `DCGAN.py`   finished  
 - Image procseeing module: `image_processing.py`  finished  
 - training module: `train.py`  finished
-- test module: included in `train.py`      finished  
+- test module: included in `main.py`      finished  
 - coordination module: `main.py`     finished  
 
 ## Requirements:  
