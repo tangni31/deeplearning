@@ -19,6 +19,9 @@ to use your own image to test the model run: python main.py test
 
 
 
+
 Test results (images downloaded from google.com):
+
+left: 16*16 input, middle: model's output,  right: orignal image
 
 ![test result](https://github.com/tangni31/tensorflow/raw/master/project%20code/test_img/test_result.png)
