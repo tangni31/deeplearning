@@ -81,11 +81,11 @@ def summarize_progress(train_data, feature, label, gene_output, batch, suffix, m
     image = image[0:max_samples,:,:,:]
     image = tf.concat(axis=0, values=[image[i,:,:,:] for i in range(max_samples)])
     image = td.sess.run(image)
-
-    filename = 'batch%06d_%s.png' % (batch, suffix)
     if test == False:
+        filename = 'batch%06d_%s.png' % (batch, suffix)    
         filename = os.path.join('train', filename)
     else:
+        filename = 'test_result.png'
         filename = os.path.join('test_img', filename)
     scipy.misc.toimage(image, cmin=0., cmax=1.).save(filename)
     print("    Saved %s" % (filename,))
