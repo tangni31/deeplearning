@@ -5,11 +5,11 @@
 ### Dataset: [Large-scale CelebFaces Attributes (CelebA) Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)  
   
 ### Modules:
-- DCGAN Module: DCGAN_model.py   finished  
-- Image procseeing module: image_processing.py  finished  
-- training module: train.py   finished
-- test module: included in train.py      finished  
-- coordination module: main.py     finished  
+- DCGAN Module: `DCGAN.py`   finished  
+- Image procseeing module: `image_processing.py`  finished  
+- training module: `train.py`  finished
+- test module: included in `train.py`      finished  
+- coordination module: `main.py`     finished  
 
 ### Run：
 - put CelebA Dataset in /dataset  
