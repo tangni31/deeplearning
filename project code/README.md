@@ -18,4 +18,6 @@ to train the model run: python main.py train
 to use your own image to test the model run: python main.py test
 
 
+
+Test results (images downloaded from google.com):
 ![test result](https://github.com/tangni31/tensorflow/raw/master/project%20code/test_img/test_result.png)
