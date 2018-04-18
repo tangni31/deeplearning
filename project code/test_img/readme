@@ -1,0 +1,6 @@
+put your own test images here, make sure number of images = batch size,(default 16)
+
+for example: if you choose batch size = 16 when you training the model, you should put 16 images here, all test images shou be 178*218 
+and face should be in the middle of the image (same as images in the CelebA Dataset).
+
+The test_image will randomly show the results of 10 images in all test images.
