@@ -12,11 +12,11 @@
 - coordination module: `main.py`     finished  
 
 ### Run：
-- put CelebA Dataset in /dataset  
-- put your own test images in /test_img (number of test images should = batch_size(default 16))  
-- to train the model run: python main.py train  
-- to use your own image to test the model run: python main.py test   
-- intermediate results are saved in /train  
+- put CelebA Dataset in `/dataset`  
+- put your own test images in `/test_img` (number of test images should = batch_size(default 16))  
+- to train the model run: `python main.py train`  
+- to use your own image to test the model run: `python main.py test`   
+- intermediate results are saved in `/train` 
 
 
 
