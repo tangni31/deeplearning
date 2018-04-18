@@ -24,7 +24,7 @@ During training, it will show the progress,  remaining training time, batch numb
 It will save the intermediate result for every 200(default) batches and save the checkpoint for every 10,000(default) batches.  
   
 ### Sample intermediate result:  
-This model will randomly choose 1 batch size images(default 16 images) in CelebA Dataset as test images to generate intermediate results. Intermediate results only shows 8(defalut) of them. 
+This model will randomly choose 1 batch size images(default 16 images) in CelebA Dataset as test images to generate intermediate results. Intermediate results only shows 8(defalut) of them.   
 left: 16*16 input       
 middle: model's output      
 right: orignal image  
