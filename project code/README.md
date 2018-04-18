@@ -23,7 +23,8 @@
 
 
 
-### Test results (images downloaded from google.com):
+### Test results (images downloaded from google.com):  
+this model was trained on a GTX1080Ti for 4 hours, approximately 70,000 batches.
 
 left: 16*16 input       
 middle: model's output      
