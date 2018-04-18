@@ -13,7 +13,8 @@
 
 ### Run：
 - put CelebA Dataset in `/dataset`  
-- put your own test images in `/test_img` (number of test images should = batch_size(default 16))  
+- put your own test images in `/test_img` (number of test images should = batch_size(defualt 16))  
+- defualt training time is 240 minutes, you can change it in `train.py`  
 - to train the model run: `python main.py train`  
 - to use your own image to test the model run: `python main.py test`   
 - intermediate results are saved in `/train`   
@@ -21,10 +22,10 @@
 ### Training:  
 ![training](https://github.com/tangni31/tensorflow/blob/master/project%20code/training.png?raw=true)  
 During training, it will show the progress,  remaining training time, batch number, genertor and discriminator's loses.
-It will save the intermediate result for every 200(default) batches and save the checkpoint for every 10,000(default) batches.  
+It will save the intermediate result for every 200(defualt) batches and save the checkpoint for every 10,000(defualt) batches.  
   
 ### Sample intermediate result:  
-This model will randomly choose 1 batch size images(default 16 images) in CelebA Dataset as test images to generate intermediate results. Intermediate results only shows 8(defalut) of them.   
+This model will randomly choose 1 batch size images(defualt 16 images) in CelebA Dataset as test images to generate intermediate results. Intermediate results only shows 8(defualt) of them.   
 left: 16*16 input       
 middle: model's output      
 right: orignal image  
