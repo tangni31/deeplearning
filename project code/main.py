@@ -113,7 +113,8 @@ def testing():#testing allowed user use his own image to test the trained model
     feed_dict = {gene_minput: test_img4_input}
     prob = sess.run(predict_restore, feed_dict)
     td = TrainData(locals())
-    train.summarize_progress(td, test_img4_input, test_img4_original, prob, 3, 'out', test=True)
+    # max_samples=10, test image will output 10 results
+    train.summarize_progress(td, test_img4_input, test_img4_original, prob, 3, 'out', max_samples=10, test=True)
     print("Finish testing")
 
 
