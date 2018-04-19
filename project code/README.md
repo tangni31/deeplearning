@@ -20,8 +20,8 @@ To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.
   
 ## Run：
 
-- put all CelebA Dataset images in `/dataset`  
-- put your own test images in `/test_img` (number of test images should = batch_size)  
+- Put all CelebA Dataset images in `/dataset`  
+- Put your own test images in `/test_img` (number of test images should = batch_size)  
       For example: if you choose batch size = 16 when you train your model, you should put 16 images in `train.py`.  
       Note:
       
@@ -29,10 +29,10 @@ To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.
       CelebA Dataset). There are some sample test images in /test_img. The test_image will randomly show the
       results of 10(defualt) images in all test images.
       
-- defualt training time is 240 minutes, you can change it in `train.py`  
-- to train the model run: `python main.py train`  
-- to use your own image to test the model run: `python main.py test`   
-- intermediate results are saved in `/train`   
+- Defualt training time is 240 minutes, you can change it in `train.py`  
+- To train the model run: `python main.py train`  
+- To use your own image to test the model run: `python main.py test`   
+- Intermediate results are saved in `/train`   
 
 ## Training:  
 
@@ -51,7 +51,7 @@ right: orignal image
 
 ## Test results (test images were downloaded from google.com):
 
-this model was trained on a GTX1080Ti for 4 hours, approximately 70,000 batches.
+This model was trained on a GTX1080Ti for 4 hours, approximately 70,000 batches.
 
 left: 16*16 input       
 middle: model's output      
