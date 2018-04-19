@@ -2,7 +2,9 @@
 ----
 
 
-## Dataset: [Large-scale CelebFaces Attributes (CelebA) Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)  
+## Dataset: [Large-scale CelebFaces Attributes (CelebA) Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)   
+
+Note: You should download `Align&Cropped Images`.
   
 ## Modules:
 
