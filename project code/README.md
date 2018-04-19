@@ -20,7 +20,7 @@ To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.
   
 ## Run：
 
-- put CelebA Dataset in `/dataset`  
+- put all CelebA Dataset images in `/dataset`  
 - put your own test images in `/test_img` (number of test images should = batch_size(defualt 16))  
 - defualt training time is 240 minutes, you can change it in `train.py`  
 - to train the model run: `python main.py train`  
