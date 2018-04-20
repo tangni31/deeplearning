@@ -6,18 +6,17 @@
 
 Note: You should download `Align&Cropped Images`.
   
-## Modules:
-
-- DCGAN Module: `DCGAN.py`   finished  
-- Image procseeing module: `image_processing.py`  finished  
-- training module: `train.py`  finished
-- test module: included in `main.py`      finished  
-- coordination module: `main.py`     finished  
+## Modules: 
+- [x] DCGAN Module: `DCGAN.py` - [x]      
+- [x] Image procseeing module: `image_processing.py`  
+- [x] training module: `train.py`  
+- [x] test module: included in `main.py`        
+- [x] coordination module: `main.py`      
 
 ## Requirements:  
 
 To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.  
-  
+
 ## Run：
 
 - Put all CelebA Dataset images in `/dataset`  
