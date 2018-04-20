@@ -7,7 +7,7 @@
 Note: You should download `Align&Cropped Images`.
   
 ## Modules: 
-- [x] DCGAN Module: `DCGAN.py` - [x]      
+- [x] DCGAN Module: `DCGAN.py`     
 - [x] Image procseeing module: `image_processing.py`  
 - [x] training module: `train.py`  
 - [x] test module: included in `main.py`        
