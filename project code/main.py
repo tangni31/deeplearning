@@ -124,3 +124,5 @@ if __name__ == '__main__':
         training()
     elif argv[1] == 'test':
         testing()
+    else:
+         print("Invalid input! You must run 'python main.py test' to test your model or 'python main.py train' to train your model")
