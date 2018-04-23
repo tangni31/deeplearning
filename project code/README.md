@@ -38,7 +38,7 @@ During training, it will show the progress,  remaining training time, batch numb
 It will save the intermediate result for every 200(defualt) batches and save the checkpoint for every 10,000(defualt) batches.  
 
 ## Testing:  
-![testing](https://github.com/tangni31/deeplearning/blob/master/project%20code/test.png?raw=true)  
+![testing]()  
 During training, it will first restore model from `/checkpoint`, and load images in `/test_img`, finally, the result will be stored into `/test_img`.
   
 ## Sample intermediate result:  
