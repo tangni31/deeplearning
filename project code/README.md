@@ -36,7 +36,7 @@ To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.
 ![train](https://github.com/tangni31/deeplearning/blob/master/project%20code/train_module.png?raw=true)  
 training module  
   
-![training](https://github.com/tangni31/tensorflow/blob/master/project%20code/training.png?raw=true) 
+![training](https://github.com/tangni31/tensorflow/blob/master/project%20code/training.png?raw=true)   
 During training, it will show the progress,  remaining training time, batch number, genertor and discriminator's loses.
 It will save the intermediate result for every 200(defualt) batches and save the checkpoint for every 10,000(defualt) batches.  
 
