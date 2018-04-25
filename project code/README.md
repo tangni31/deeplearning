@@ -31,6 +31,11 @@ To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.
 - To use your own image to test the model run: `python main.py test`   
 - Intermediate results are saved in `/train`   
 
+## Trained model
+
+We've uploaded our pertrained model on google drive. To use it, you nedd download `checkpoint.zip`, unzip it and put all files in `/checkpoint`  
+Download trained model:  [Trained Model](https://drive.google.com/open?id=1J3UmAzygZTWp40mhS3los5NNJS8aky6Y)  
+
 ## Training:  
 
 ![train](https://github.com/tangni31/deeplearning/blob/master/project%20code/train_module.png?raw=true)  
@@ -61,4 +66,6 @@ left: 16*16 input
 middle: model's output      
 right: orignal image  
 
-![test result](https://github.com/tangni31/tensorflow/raw/master/project%20code/test_img/test_result.png)
+![test result](https://github.com/tangni31/tensorflow/raw/master/project%20code/test_img/test_result.png)  
+
+
