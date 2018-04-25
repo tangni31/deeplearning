@@ -31,9 +31,12 @@ To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.
 - To use your own image to test the model run: `python main.py test`   
 - Intermediate results are saved in `/train`   
 
-## Training:  
+## Training:  
 
-![training](https://github.com/tangni31/tensorflow/blob/master/project%20code/training.png?raw=true)  
+![train](https://github.com/tangni31/deeplearning/blob/master/project%20code/train2.png?raw=true)  
+train model  
+  
+![training](https://github.com/tangni31/tensorflow/blob/master/project%20code/training.png?raw=true) 
 During training, it will show the progress,  remaining training time, batch number, genertor and discriminator's loses.
 It will save the intermediate result for every 200(defualt) batches and save the checkpoint for every 10,000(defualt) batches.  
 
