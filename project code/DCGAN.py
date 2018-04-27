@@ -91,8 +91,7 @@ class Model:
         return self
 
     def add_residual_block(self, num_units, mapsize=3, num_layers=2, stddev_factor=1e-3):
-        """Adds a residual block as per Arxiv 1512.03385, Figure 3"""
-        # Add projection in series if needed prior to shortcut
+        """Adds a residual block: Arxiv 1512.03385, Figure 3"""
         if num_units != int(self.get_output().get_shape()[3]):
             self.add_conv2d(num_units, mapsize=1, stride=1, stddev_factor=1.)
         bypass = self.get_output()
@@ -108,8 +107,7 @@ class Model:
         """Adds a layer that sums the top layer with the given term"""
         with tf.variable_scope(self.get_layer_name()):
             prev_shape = self.get_output().get_shape()
-            term_shape = term.get_shape()
-            assert prev_shape == term_shape and "Can't sum terms with a different size"
+            term_shape = term.get_shape()  
             out = tf.add(self.get_output(), term)
         self.outputs.append(out)
         return self
@@ -119,7 +117,6 @@ class Model:
         with tf.variable_scope(self.get_layer_name()):
             prev_shape = self.get_output().get_shape()
             reduction_indices = list(range(len(prev_shape)))
-            assert len(reduction_indices) > 2 and "Can't average a (batch, activation) tensor"
             reduction_indices = reduction_indices[1:-1]
             out = tf.reduce_mean(self.get_output(), reduction_indices=reduction_indices)
         self.outputs.append(out)
