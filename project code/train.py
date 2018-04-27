@@ -4,7 +4,7 @@ import tensorflow as tf
 import time
 import scipy.misc
 
-train_time = 60 #min
+train_time = 240 #min
 learning_rate_start = 0.0002
 learning_rate_half_life = 5000
 summary_period = 200
