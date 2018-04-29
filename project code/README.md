@@ -22,7 +22,7 @@ To run it, you need install `python3` with `Tensorflow`, `numpy` and `scipy`.
 - Put all CelebA Dataset images in `/dataset`  
 - Put your own test images in `/test_img`        
         ```Note: All test images should be 178*218 and face should be in the image center (same as images in the 
-        CelebA Dataset). There are some sample test images in /test_img. The model takes one batch_size of images as input to generate test results and the test_result.png will randomly show 10(defualt) images in all your test images. So, if your test images is less than a batch_size, there will be some duplicated results.```    
+        CelebA Dataset). There are some sample test images in /test_img. The model takes one batch_size of images as input to generate test results and the test_result.png will randomly show 10(defualt) of them. So, if your test images is less than a batch_size, there will be some duplicated results.```    
       
 - Defualt training time is 240 minutes, you can change it in `train.py`  
 - To train the model run: `python main.py train`  
