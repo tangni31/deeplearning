@@ -8,7 +8,7 @@ import random
 from sys import argv
 
 random_seed = 0#Seed used to initialize rng
-
+batch_size = 16
 
 def prepare_dirs(delete_train_dir=False):
     # Create checkpoint dir (do not delete anything)
@@ -58,8 +58,8 @@ def training():
     # Setup global tensorflow state
     sess, summary_writer = setup_tensorflow()
     # Separate training and test sets
-    train_filenames = all_filenames[:-16]
-    test_filenames = all_filenames[-16:]
+    train_filenames = all_filenames[:-batch_size]
+    test_filenames = all_filenames[-batch_size:]
     # Setup async input queues
     train_features, train_labels = image_processing.get_inputs(sess, train_filenames)
     test_features, test_labels = image_processing.get_inputs(sess, test_filenames)
