@@ -208,9 +208,7 @@ def create_model(sess, features, labels):
     channels = int(features.get_shape()[3])
     
     '''
-    gene_minput is used for testing, we use 1 batch_size images to generate test results,
-    so please make sure you put 1 batch_size of images in'/test_img' before you test the 
-    trained model with your own images.
+    gene_minput is used for testing, we use 1 batch_size images to generate test results
     '''
     gene_minput = tf.placeholder(tf.float32, shape=[batch_size, rows, cols, channels])
 
