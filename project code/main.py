@@ -105,7 +105,7 @@ def testing():#testing allowed user use his own image to test the trained model
     # region prediction test
     predict_restore = gene_moutput
     # Prepare directories
-    test_filenames = tf.gfile.ListDirectory('test_img') #number of images in 'test_img' should = batch size
+    test_filenames = tf.gfile.ListDirectory('test_img') 
     test_filenames = sorted(test_filenames)
     random.shuffle(test_filenames)
     test_filenames = [os.path.join('test_img', f) for f in filenames]
