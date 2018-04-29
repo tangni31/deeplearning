@@ -68,6 +68,7 @@ def training():
     noisy_train_features = train_features + \
                            tf.random_normal(train_features.get_shape(), stddev=noise_level)
     # Create and initialize model
+    #gene_minput and gene_moutput is used for testing
     [gene_minput, gene_moutput,
      gene_output, gene_var_list,
      disc_real_output, disc_fake_output, disc_var_list] = \
