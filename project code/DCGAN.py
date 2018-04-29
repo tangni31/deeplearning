@@ -206,7 +206,12 @@ def create_model(sess, features, labels):
     rows = int(features.get_shape()[1])
     cols = int(features.get_shape()[2])
     channels = int(features.get_shape()[3])
-
+    
+    '''
+    gene_minput is used for testing, we use 1 batch_size images to generate test results,
+    so please make sure you put 1 batch_size of images in'/test_img' before you test the 
+    trained model with your own images.
+    '''
     gene_minput = tf.placeholder(tf.float32, shape=[batch_size, rows, cols, channels])
 
     with tf.variable_scope('gene') as scope:
@@ -214,7 +219,7 @@ def create_model(sess, features, labels):
                     _generator_model(sess, features, labels, channels)
 
         scope.reuse_variables()
-
+        #gene_moutput: test results
         gene_moutput, _ = _generator_model(sess, gene_minput, labels, channels)
     
     # Discriminator with real data
