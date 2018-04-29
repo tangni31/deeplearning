@@ -66,7 +66,7 @@ def train_model(train_data):
 
 
 
-def summarize_progress(train_data, feature, label, gene_output, batch, suffix, max_samples=8,test = False):
+def summarize_progress(train_data, feature, label, gene_output, batch, suffix, max_samples=10, test = False):
     td = train_data
 
     size = [label.shape[1], label.shape[2]]
