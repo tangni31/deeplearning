@@ -12,7 +12,7 @@ class Model:
     #layer has 4 dimensions: (batch, width, height, channels)
     def __init__(self,name,image_input): #name is the model's name eg. generator, discriminator
         self.name = name
-        self.output = [image_input] #store input in a list and calculate output
+        self.outputs = [image_input] #store input in a list and calculate output
 
     def get_layer_name(self, layer=None):
         #generate a name for the layer
