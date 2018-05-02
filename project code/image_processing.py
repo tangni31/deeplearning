@@ -10,7 +10,7 @@ def get_inputs(sess, filenames): #filenames is a list contain all images' name t
         key, value = reader.read(filename_list)
         image = tf.image.decode_jpeg(value, channels=3, name="dataset_image")
     except:
-        file = open(filenames. 'rb')
+        file = open(filenames, 'rb')
         data = file.read()
         file.close()
         channels = 3
